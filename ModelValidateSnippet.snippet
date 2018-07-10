@@ -1,0 +1,22 @@
+﻿<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        Model Validation Snippet
+      </Title>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[if (!actionContext.ModelState.IsValid)
+            {
+                var errors = (from a in actionContext.ModelState
+                              where a.Value.Errors.Count > 0
+                              select new KeyValuePair<string, string>(a.Key, a.Value.Errors.First().ErrorMessage)).ToArray();
+
+                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.BadRequest, errors);
+            }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
