@@ -1,0 +1,11 @@
+﻿public List<BookEx> DummyData()
+        {
+            List<BookEx> books = new List<BookEx>()
+            {
+                new BookEx() {  Id = 1, Name = "แฮร์รี่ พอตเตอร์ กับเด็กต้องคำสาป", Price = 425},
+                new BookEx() {  Id = 2, Name = "พระราชอารมณ์ขัน", Price = 284.05},
+                new BookEx() {  Id = 3, Name = "เล่นหุ้นออนไลน์ไม่ยาก", Price = 175.75},
+                new BookEx() {  Id = 4, Name = "51 วิธีคิดของหัวหน้าที่ลูกน้องอยากทำงานด้วย", Price = 288}
+            };
+            return books;
+        }
